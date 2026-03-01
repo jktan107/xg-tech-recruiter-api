@@ -1,0 +1,26 @@
+services:
+  # Web Service
+  - type: web
+    name: xg-tech-recruiter-api
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health
+    autoDeploy: true
+
+  # Background Worker (if needed for async processing)
+  # - type: worker
+  #   name: recruiter-worker
+  #   runtime: node
+  #   plan: starter
+  #   buildCommand: npm install
+  #   startCommand: node worker.js
+  #   envVars:
+  #     - key: NODE_ENV
+  #       value: production
