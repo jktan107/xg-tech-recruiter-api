@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import { fileSearchTool, Agent, AgentInputItem, Runner, withTrace } from "@openai/agents";
+import { fileSearchTool, Agent, TResponseInputItem, Runner, withTrace } from "@openai/agents";
 
 // Load environment variables
 dotenv.config();
